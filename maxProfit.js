@@ -8,11 +8,10 @@ var maxProfit = function(prices) {
             minPrice = prices[i]
         }
 
-        if(prices[i]-minPrice>0 && prices[i]-minPrice > maxProfitValue){
+        if(prices[i]-minPrice > maxProfitValue){
             maxProfitValue = prices[i]-minPrice
         }
 
-        console.log(minPrice, maxProfitValue);
     }
 
     return maxProfitValue;
@@ -20,3 +19,5 @@ var maxProfit = function(prices) {
 
 let prices = [7,1,5,3,6,4];
 const res = maxProfit(prices);
+
+console.log("You can earn a maximum profit of",res);
